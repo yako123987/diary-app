@@ -116,6 +116,8 @@ app.post("/diary", (req, res) => {
   );
 });
 
-app.listen(3000, () => {
-  console.log("サーバーを起動しました");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`サーバーを起動しました: ${PORT}`);
 });
